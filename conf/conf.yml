@@ -1,0 +1,11 @@
+nsq:
+  nsqlookupd_addr: 192.168.50.250:4161
+  nsqd_tcp_addrs: 192.168.50.250:4150  172.16.196.129:4150  172.16.196.131:4150
+  heart_beat_time: 5  #心跳间隔时间
+  data_server_topic: data_server_addr #数据服务向接口服务发送心跳地址，证明自己活着，这是topic名称
+server:
+  server_addr: 127.0.0.1:8081
+  read_time_out: 5
+  write_time_out: 5
+etcd:
+  filepath_prefix: /file
