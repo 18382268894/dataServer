@@ -16,8 +16,15 @@ func Load(router *gin.Engine){
 	f :=router.Group("file")
 
 	{
-		//f.GET("/:objectsName")
+		f.GET("",objetcs.GetFile)
 		f.POST("",objetcs.PostFile)
 		//f.DELETE("/:objectsName")
 	}
+
+	fs := router.Group("files")
+	{
+		fs.GET("",objetcs.GetFiles)
+	}
+
+	router.GET("/realfile",objetcs.GetRealfile)
 }
